@@ -32,9 +32,9 @@ nav {
         }
 
             nav ul li a {
-                color: whitesmoke !important; 
-                font-size: 1.3em;
-                font-weight: 400;
+                color: rgb(245, 245, 245) !important; 
+                font-size: 1.4em;
+                font-weight: 500 !important;
                 padding: 2px 7px;
                 border-radius: 6px;
                 text-decoration: none;
@@ -83,7 +83,7 @@ footer {
 
 .logo {
     margin: 15px;
-    width: 90%;
+    width: 60%;
     height: auto;
 }
 /* Esta clase es para quitarle la decoración al link de descarga de lo que será mi CV */
@@ -246,10 +246,91 @@ filter:opacity(30%);
 
 /* Colocando el contenido en columna cuando la pantalla sea menor que 768px */
 
-@media(max-width: 768px){
+@media(max-width: 992px){
 
     .logo {
-    width: 80%;
+    width: 60%;
+    align-self: center;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .contCajas{
+        width: 100%;
+        margin-bottom: 10px;
+        align-self: center;
+        font-size: 1.4em;
+        padding: 10px;
+        text-align: justify;
+    }
+
+    .contenedor img {
+        width: 100%;
+    }
+
+    .headingH1{
+        text-align: center;
+    }
+
+    .intro p {
+        font-size: 1.1em;
+    }
+
+    .recorrido {
+        margin: 20px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: 25% repeat(4, 200px);
+        grid-template-areas: 
+        "imgIzq intro intro"
+        "html html imgHtml"
+        "css css imgCss"
+        "javascript javascript imgJavascript"
+        "angular angular imgAngular";
+        gap: 20px;
+    }
+
+        .recorrido .textP {
+            font-size: 1.1em;
+        }
+
+        .recorrido .intro {
+            align-items:start;
+        }
+
+    .imgDer {
+        display: none;
+    }
+    .banner {
+        display: none;
+    }
+
+
+    footer{
+        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        footer p {
+            font-size: 1em;
+            text-align: center;
+        }
+    
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Segundo Breakpoint */
+@media(max-width: 576px){
+
+    .logo {
+    width: 50%;
     align-self: center;
     }
 
@@ -283,10 +364,6 @@ filter:opacity(30%);
         flex-direction: column;
         align-items: center;
     }
-
-        footer p {
-            text-align: center;
-        }
     
     iframe {
         width: 100%;
