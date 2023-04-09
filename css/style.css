@@ -83,7 +83,7 @@ footer {
 
 .logo {
     margin: 15px;
-    width: 60%;
+    width: 90%;
     height: auto;
 }
 /* Esta clase es para quitarle la decoración al link de descarga de lo que será mi CV */
@@ -161,16 +161,8 @@ footer {
     gap: 20px;
 }
 
-.intro {
-    grid-area: intro;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 30px;
-}
-
 /* Dos clases que me permiten ahorrar algo de código y no repetir tanto lo mismo */
+
 .imgGrid{
     display: flex;
     justify-content: center;
@@ -184,9 +176,20 @@ footer {
     align-items: center;
     padding: 20px;
 }
+
 /* ----------------------- */
 
 /* Bautizando mis areas como dice la profe :) */
+
+.intro {
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
 .imgIzq{
     grid-area: imgIzq;
 }
@@ -244,7 +247,7 @@ filter:opacity(30%);
 
 /* Probando con Responsive 1er Breakpoint */
 
-/* Colocando el contenido en columna cuando la pantalla sea menor que 768px */
+/* Colocando el contenido en columna cuando la pantalla sea menor que 992px */
 
 @media(max-width: 992px){
 
@@ -275,26 +278,12 @@ filter:opacity(30%);
         text-align: center;
     }
 
-    .intro p {
+    .intro .textP {
         font-size: 1.1em;
     }
 
-    .recorrido {
-        margin: 20px;
-        display: grid;
-        grid-template-columns: 1fr 2fr 2fr;
-        grid-template-rows: 25% repeat(4, 200px);
-        grid-template-areas: 
-        "imgIzq intro intro"
-        "html html imgHtml"
-        "css css imgCss"
-        "javascript javascript imgJavascript"
-        "angular angular imgAngular";
-        gap: 20px;
-    }
-
         .recorrido .textP {
-            font-size: 1.1em;
+            font-size: 1em;
         }
 
         .recorrido .intro {
@@ -354,6 +343,18 @@ filter:opacity(30%);
 
     .headingH1{
         text-align: center;
+    }
+
+    .recorrido {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imgDer {
+        display: none;
+    }
+    .banner {
+        display: none;
     }
 
     h1{
