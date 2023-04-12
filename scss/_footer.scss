@@ -1,0 +1,14 @@
+/* El footer tiene los iconos para redes sociales de boostrap, tambien agregue un id para llegar a la parte superior de la pagina desde el logo del footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bgSecondary;
+    border-radius: 12px;
+    margin: 15px 15px;
+    padding: 15px;
+    a{
+        text-decoration: none;
+    }
+}

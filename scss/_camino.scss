@@ -1,0 +1,107 @@
+/* Creando Grid para la sección Camino */
+
+/* Un background para aplicarle solo a los lugares elegidos */
+.bgGrid {
+    background-color: $bgPrimary;
+    border-radius: 12px;
+}
+/* Definimos la cantidad de columnas y filas de la grilla, y asignamos los lugares en cada celda */
+.recorrido {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 25% repeat(4, 200px);
+    grid-template-areas: 
+    "imgIzq intro intro imgDer"
+    "html html imgHtml banner"
+    "css css imgCss banner"
+    "javascript javascript imgJavascript banner"
+    "angular angular imgAngular banner";
+    gap: 20px;
+}
+
+/* Dos clases que me permiten ahorrar algo de código y no repetir tanto lo mismo */
+
+.imgGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contGrid{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ----------------------- */
+
+/* Bautizando mis areas como dice la profe :) */
+
+.intro {
+    grid-area: intro;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+.imgIzq{
+    grid-area: imgIzq;
+}
+
+.imgDer{
+    grid-area: imgDer;
+}
+
+.html {
+    grid-area: html;
+}
+
+.imgHtml{
+    grid-area: imgHtml;
+}
+
+.css {
+    grid-area: css;
+}
+
+.imgCss{
+    grid-area: imgCss;
+}
+
+.javascript {
+    grid-area: javascript;
+}
+
+.imgJavascript{
+    grid-area: imgJavascript;
+}
+
+.angular {
+    grid-area: angular;
+}
+
+.imgAngular{
+    grid-area: imgAngular;
+}
+
+.banner {
+    grid-area: banner;
+}
+/* Aqui termina la ubicación de cada contenido en el grid */
+
+/* Le aplique al banner un filtro con opacidad del 30% y use la propiedad object-fit, asi pude lograr que ocupara todo el ancho y alto del lugar que le asigne */
+
+.banner {
+    img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    filter:opacity(30%);
+    }
+}

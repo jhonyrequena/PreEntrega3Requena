@@ -7,7 +7,7 @@
 /* Aplico un reset que me permita tener el mismo tipo y color de fuente en todo el documento */
 * {
 font-family: 'Poppins', sans-serif;
-color: whitesmoke;
+color: rgb(245, 245, 245);
 box-sizing: border-box;
 }
 
@@ -17,10 +17,29 @@ h1 {
     font-weight: 500;
 }
 
+h2 {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+/* Aplico un Background Pattern que se repita y quede fijo cuando se hace scroll, para dar la sensación de parallax */
+
+body {
+    background-image: url(../img/darkness.png);
+    background-repeat: repeat;
+    background-attachment:fixed;
+}
+
+.textP {
+    font-size: 1.4em;
+    font-weight: 300;
+    text-align:justify;
+}
+
 /* Si bien la nav la trabaje con boostrap, agregue unas lineas de css propias para darle mi estilo personal */
 nav {
     border-radius: 12px;
-    background-color: rgba(5, 50, 68, 0.250);
+    background-color: rgba(5, 50, 68, 0.642);
 }
 
     nav ul {
@@ -32,8 +51,8 @@ nav {
         }
 
             nav ul li a {
-                color: rgb(245, 245, 245) !important; 
-                font-size: 1.4em;
+                color:rgb(255, 196, 93) !important; 
+                font-size: 1.5em;
                 font-weight: 500 !important;
                 padding: 2px 7px;
                 border-radius: 6px;
@@ -41,8 +60,9 @@ nav {
             }
 
                 nav ul li a:hover {
-                    background-color: rgb(103, 193, 216);
-                    color:rgb(0, 0, 0) !important;
+                    background-color: rgb(0, 74, 173);
+                    color:rgb(245, 245, 245) !important;
+                    padding: 4px 9px;
                 }
 
 
@@ -52,7 +72,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(5, 50, 68, 0.250);
+    background-color: rgba(5, 50, 68, 0.642);
     border-radius: 12px;
     margin: 15px 15px;
     padding: 15px;
@@ -64,13 +84,7 @@ footer {
 
 /* Para el formulario utilice una pequeña grilla de boostrap para separarlo del maps y use un mix de los modelos disponibles */
 
-/* Aplico un Background Pattern que se repita y quede fijo cuando se hace scroll, para dar la sensación de parallax */
 
-.bgPattern {
-    background-image: url(../img/darkness.png);
-    background-repeat: repeat;
-    background-attachment:fixed;
-}
 
 /* Aplique propiedades a la imágen heroe, con un width del 100% para que se adapte al tamaño del navegador, más algo de padding que la mantenga con espacio de sus alrededores */
 
@@ -83,7 +97,7 @@ footer {
 
 .logo {
     margin: 15px;
-    width: 30%;
+    width: 50%;
     height: auto;
 }
 /* Esta clase es para quitarle la decoración al link de descarga de lo que será mi CV */
@@ -103,10 +117,6 @@ footer {
     margin: 30px 20px;
 }
 
-.headingH2 {
-    font-size: 2em;
-    font-weight: 400;
-}
 /* --------------------- */
 /* Un contenedor para usarlo en las partes con contenido de dos columnas con imagenes y texto */
 .contenedor {
@@ -132,12 +142,6 @@ footer {
     width: 100%;
 }
 /* ------------------ */
-
-.textP {
-    font-size: 1.3em;
-    font-weight: 300;
-    text-align:justify;
-}
 
 /* Creando Grid para la sección Camino */
 
@@ -252,7 +256,7 @@ filter:opacity(30%);
 @media(max-width: 992px){
 
     .logo {
-    width: 60%;
+    width: 75%;
     align-self: center;
     }
 
@@ -319,7 +323,7 @@ filter:opacity(30%);
 @media(max-width: 576px){
 
     .logo {
-    width: 50%;
+    width: 35%;
     align-self: center;
     }
 

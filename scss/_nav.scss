@@ -1,0 +1,25 @@
+/* Si bien la nav la trabaje con boostrap, agregue unas lineas de css propias para darle mi estilo personal */
+nav {
+    border-radius: 12px;
+    background-color: $bgSecondary;
+    ul {
+        align-items: flex-end;
+        li{
+            margin: 0 20px 0 0;
+            a{
+                color:$secondaryColor !important; 
+                font-size: $textSm;
+                font-weight: $fontBold !important;
+                padding: 2px 7px;
+                border-radius: 6px;
+                text-decoration: none;
+                    &:hover{
+                        background-color: $bgOptional;
+                        color:$mainColor !important;
+                        padding: 4px 9px;
+                    }
+            }
+        }
+    }
+        
+}

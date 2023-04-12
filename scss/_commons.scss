@@ -1,0 +1,23 @@
+h1 {
+    font-size: $textLg;   
+    font-weight: $fontBold;
+}
+
+h2 {
+    font-size: $textMd;
+    font-weight: $fontlight;
+}
+
+/* Aplico un Background Pattern que se repita y quede fijo cuando se hace scroll, para dar la sensación de parallax */
+
+body {
+    background-image: url(../img/darkness.png);
+    background-repeat: repeat;
+    background-attachment:fixed;
+}
+
+p {
+    font-size: $textSm;
+    font-weight: $fontXlight;
+    text-align:justify;
+}

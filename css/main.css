@@ -1,3 +1,263 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+h1 {
+  font-size: 2.5em;
+  font-weight: 500;
+}
 
+h2 {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+/* Aplico un Background Pattern que se repita y quede fijo cuando se hace scroll, para dar la sensación de parallax */
+body {
+  background-image: url(../img/darkness.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+p {
+  font-size: 1.5em;
+  font-weight: 300;
+  text-align: justify;
+}
+
+/* Si bien la nav la trabaje con boostrap, agregue unas lineas de css propias para darle mi estilo personal */
+nav {
+  border-radius: 12px;
+  background-color: rgba(5, 50, 68, 0.642);
+}
+nav ul {
+  align-items: flex-end;
+}
+nav ul li {
+  margin: 0 20px 0 0;
+}
+nav ul li a {
+  color: rgb(255, 196, 93) !important;
+  font-size: 1.5em;
+  font-weight: 500 !important;
+  padding: 2px 7px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  background-color: rgb(0, 74, 173);
+  color: rgb(245, 245, 245) !important;
+  padding: 4px 9px;
+}
+
+/* Creando Grid para la sección Camino */
+/* Un background para aplicarle solo a los lugares elegidos */
+.bgGrid {
+  background-color: rgba(5, 50, 68, 0.25);
+  border-radius: 12px;
+}
+
+/* Definimos la cantidad de columnas y filas de la grilla, y asignamos los lugares en cada celda */
+.recorrido {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: 25% repeat(4, 200px);
+  grid-template-areas: "imgIzq intro intro imgDer" "html html imgHtml banner" "css css imgCss banner" "javascript javascript imgJavascript banner" "angular angular imgAngular banner";
+  gap: 20px;
+}
+
+/* Dos clases que me permiten ahorrar algo de código y no repetir tanto lo mismo */
+.imgGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contGrid {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ----------------------- */
+/* Bautizando mis areas como dice la profe :) */
+.intro {
+  grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+}
+
+.imgIzq {
+  grid-area: imgIzq;
+}
+
+.imgDer {
+  grid-area: imgDer;
+}
+
+.html {
+  grid-area: html;
+}
+
+.imgHtml {
+  grid-area: imgHtml;
+}
+
+.css {
+  grid-area: css;
+}
+
+.imgCss {
+  grid-area: imgCss;
+}
+
+.javascript {
+  grid-area: javascript;
+}
+
+.imgJavascript {
+  grid-area: imgJavascript;
+}
+
+.angular {
+  grid-area: angular;
+}
+
+.imgAngular {
+  grid-area: imgAngular;
+}
+
+.banner {
+  grid-area: banner;
+}
+
+/* Aqui termina la ubicación de cada contenido en el grid */
+/* Le aplique al banner un filtro con opacidad del 30% y use la propiedad object-fit, asi pude lograr que ocupara todo el ancho y alto del lugar que le asigne */
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  filter: opacity(30%);
+}
+
+/* El footer tiene los iconos para redes sociales de boostrap, tambien agregue un id para llegar a la parte superior de la pagina desde el logo del footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(5, 50, 68, 0.642);
+  border-radius: 12px;
+  margin: 15px 15px;
+  padding: 15px;
+}
+footer a {
+  text-decoration: none;
+}
+
+/* Probando con Responsive 1er Breakpoint */
+/* Colocando el contenido en columna cuando la pantalla sea menor que 992px */
+@media (max-width: 992px) {
+  .logo {
+    width: 60%;
+    align-self: center;
+  }
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedor img {
+    width: 100%;
+  }
+  .contCajas {
+    width: 100%;
+    margin-bottom: 10px;
+    align-self: center;
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: justify;
+  }
+  .headingH1 {
+    text-align: center;
+  }
+  .intro .textP {
+    font-size: 1em;
+  }
+  .recorrido .textP {
+    font-size: 1em;
+  }
+  .recorrido .intro {
+    align-items: start;
+  }
+  .imgDer {
+    display: none;
+  }
+  .banner {
+    display: none;
+  }
+  footer {
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer p {
+    font-size: 1em;
+    text-align: center;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+/* Segundo Breakpoint */
+@media (max-width: 576px) {
+  .logo {
+    width: 35%;
+    align-self: center;
+  }
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contenedor img {
+    width: 100%;
+  }
+  .contCajas {
+    width: 100%;
+    margin-bottom: 10px;
+    align-self: center;
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+  }
+  .headingH1 {
+    text-align: center;
+  }
+  .recorrido {
+    display: flex;
+    flex-direction: column;
+  }
+  .imgDer {
+    display: none;
+  }
+  .banner {
+    display: none;
+  }
+  h1 {
+    text-align: center;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
