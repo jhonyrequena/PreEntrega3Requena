@@ -1,0 +1,9 @@
+@mixin bgKey (){
+    background-color: $bgPrimary;
+    border-radius: 12px;
+}
+
+@mixin bgSecondary (){
+    background-color: $bgSecondary;
+    border-radius: 12px;
+}

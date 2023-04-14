@@ -1,11 +1,13 @@
 h1 {
     font-size: $textLg;   
     font-weight: $fontBold;
+    color: $secondaryColor;
 }
 
 h2 {
     font-size: $textMd;
     font-weight: $fontlight;
+    color: $standarColor
 }
 
 /* Aplico un Background Pattern que se repita y quede fijo cuando se hace scroll, para dar la sensación de parallax */
@@ -20,4 +22,48 @@ p {
     font-size: $textSm;
     font-weight: $fontXlight;
     text-align:justify;
+    color: $mainColor;
+}
+
+/* Un contenedor para usarlo en las partes con contenido de dos columnas con imagenes y texto */
+.contenedor {
+    display: flex;
+    align-items: center;
+    background-color: $bgPrimary;
+    border-radius: 12px;
+    margin: 20px;
+    padding: 30px;
+    }
+
+.headingH1{
+   @extend .contenedor;
+        flex-direction: column;
+   }
+
+.contCajas {
+    padding: 20px;
+    }
+
+.imgS {
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.logo {
+    margin: 15px;
+    width: 50%;
+    height: auto;
+}
+
+.descarga{
+    font-size: $textSm;
+    text-decoration: none;
+}
+
+.borderGal {
+    border:2px solid $mainColor;
+}
+
+.sizeGal {
+    width: 100%;
 }

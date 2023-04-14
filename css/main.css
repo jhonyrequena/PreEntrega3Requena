@@ -3,11 +3,13 @@
 h1 {
   font-size: 2.5em;
   font-weight: 500;
+  color: rgb(255, 196, 93);
 }
 
 h2 {
   font-size: 2em;
   font-weight: 400;
+  color: rgb(0, 74, 173);
 }
 
 /* Aplico un Background Pattern que se repita y quede fijo cuando se hace scroll, para dar la sensación de parallax */
@@ -21,12 +23,55 @@ p {
   font-size: 1.5em;
   font-weight: 300;
   text-align: justify;
+  color: rgb(245, 245, 245);
+}
+
+/* Un contenedor para usarlo en las partes con contenido de dos columnas con imagenes y texto */
+.contenedor, .headingH1 {
+  display: flex;
+  align-items: center;
+  background-color: rgba(5, 50, 68, 0.25);
+  border-radius: 12px;
+  margin: 20px;
+  padding: 30px;
+}
+
+.headingH1 {
+  flex-direction: column;
+}
+
+.contCajas {
+  padding: 20px;
+}
+
+.imgS {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.logo {
+  margin: 15px;
+  width: 50%;
+  height: auto;
+}
+
+.descarga {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.borderGal {
+  border: 2px solid rgb(245, 245, 245);
+}
+
+.sizeGal {
+  width: 100%;
 }
 
 /* Si bien la nav la trabaje con boostrap, agregue unas lineas de css propias para darle mi estilo personal */
 nav {
-  border-radius: 12px;
   background-color: rgba(5, 50, 68, 0.642);
+  border-radius: 12px;
 }
 nav ul {
   align-items: flex-end;
@@ -147,11 +192,11 @@ nav ul li a:hover {
 
 /* El footer tiene los iconos para redes sociales de boostrap, tambien agregue un id para llegar a la parte superior de la pagina desde el logo del footer */
 footer {
+  background-color: rgba(5, 50, 68, 0.642);
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(5, 50, 68, 0.642);
-  border-radius: 12px;
   margin: 15px 15px;
   padding: 15px;
 }
@@ -166,11 +211,11 @@ footer a {
     width: 60%;
     align-self: center;
   }
-  .contenedor {
+  .contenedor, .headingH1 {
     flex-direction: column;
     align-items: center;
   }
-  .contenedor img {
+  .contenedor img, .headingH1 img {
     width: 100%;
   }
   .contCajas {
@@ -219,11 +264,11 @@ footer a {
     width: 35%;
     align-self: center;
   }
-  .contenedor {
+  .contenedor, .headingH1 {
     flex-direction: column;
     align-items: center;
   }
-  .contenedor img {
+  .contenedor img, .headingH1 img {
     width: 100%;
   }
   .contCajas {

@@ -1,7 +1,7 @@
 /* Si bien la nav la trabaje con boostrap, agregue unas lineas de css propias para darle mi estilo personal */
 nav {
-    border-radius: 12px;
-    background-color: $bgSecondary;
+    @include bgSecondary;
+    
     ul {
         align-items: flex-end;
         li{
@@ -20,6 +20,5 @@ nav {
                     }
             }
         }
-    }
-        
+    }       
 }

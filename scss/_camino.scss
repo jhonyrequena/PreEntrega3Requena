@@ -2,8 +2,7 @@
 
 /* Un background para aplicarle solo a los lugares elegidos */
 .bgGrid {
-    background-color: $bgPrimary;
-    border-radius: 12px;
+    @include bgKey;
 }
 /* Definimos la cantidad de columnas y filas de la grilla, y asignamos los lugares en cada celda */
 .recorrido {
@@ -57,7 +56,7 @@
     grid-area: imgDer;
 }
 
-.html {
+.html{
     grid-area: html;
 }
 
@@ -65,7 +64,7 @@
     grid-area: imgHtml;
 }
 
-.css {
+.css{
     grid-area: css;
 }
 
@@ -73,7 +72,7 @@
     grid-area: imgCss;
 }
 
-.javascript {
+.javascript{
     grid-area: javascript;
 }
 
@@ -81,7 +80,7 @@
     grid-area: imgJavascript;
 }
 
-.angular {
+.angular{
     grid-area: angular;
 }
 
@@ -89,7 +88,7 @@
     grid-area: imgAngular;
 }
 
-.banner {
+.banner{
     grid-area: banner;
 }
 /* Aqui termina la ubicación de cada contenido en el grid */
