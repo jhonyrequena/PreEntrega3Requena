@@ -10,6 +10,11 @@ h2 {
     color: $standarColor
 }
 
+h3 {
+    font-size: $textSm;
+    color:$secondaryColor;
+}   
+
 /* Aplico un Background Pattern que se repita y quede fijo cuando se hace scroll, para dar la sensación de parallax */
 
 body {
@@ -23,6 +28,11 @@ p {
     font-weight: $fontXlight;
     text-align:justify;
     color: $mainColor;
+}
+
+button {
+    background-color: $bgOptional !important;
+    color:$secondaryColor !important;
 }
 
 /* Un contenedor para usarlo en las partes con contenido de dos columnas con imagenes y texto */
@@ -46,8 +56,9 @@ p {
 
 .imgS {
     width: 100%;
-    padding: 10px 20px;
-}
+    padding: 20px;
+    height: auto;
+    }
 
 .logo {
     margin: 15px;
@@ -55,15 +66,26 @@ p {
     height: auto;
 }
 
-.descarga{
-    font-size: $textSm;
+.form{
+    color: $secondaryColor;
+    font-size: $textXsm;
     text-decoration: none;
 }
 
 .borderGal {
-    border:2px solid $mainColor;
+    border: 1px solid $mainColor;
+    border-radius: 12px;
 }
 
-.sizeGal {
-    width: 100%;
+.buttonError {
+    @extend .form;
+    background: $bgOptional;
+    color: $secondaryColor;
+    border-radius: 12px;
+    margin: 15px;
+    padding: 10px;
+    &:hover{
+        background-color: $bgSecondary;
+        color:$mainColor;
+    }
 }

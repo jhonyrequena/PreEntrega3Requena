@@ -3,10 +3,15 @@
 footer {
     @include bgSecondary;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 15px 15px;
-    padding: 15px;
+    margin: 20px;
+    padding: 20px;
+    p{
+        font-size: $textXsm;
+        font-weight: $fontBold;
+        color: $secondaryColor;
+    }
     a{
         text-decoration: none;
     }

@@ -1,5 +1,4 @@
 /* Creando Grid para la sección Camino */
-
 /* Un background para aplicarle solo a los lugares elegidos */
 .bgGrid {
     @include bgKey;
@@ -8,19 +7,16 @@
 .recorrido {
     margin: 20px;
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-rows: 25% repeat(4, 200px);
+    grid-template-columns: 15vw 30vw 30vw auto;
     grid-template-areas: 
     "imgIzq intro intro imgDer"
     "html html imgHtml banner"
     "css css imgCss banner"
     "javascript javascript imgJavascript banner"
     "angular angular imgAngular banner";
-    gap: 20px;
+    gap: 15px;
 }
-
 /* Dos clases que me permiten ahorrar algo de código y no repetir tanto lo mismo */
-
 .imgGrid{
     display: flex;
     justify-content: center;
@@ -28,24 +24,19 @@
 }
 
 .contGrid{
-    display: flex;
+    @extend .imgGrid;
     flex-direction: column;
-    justify-content:flex-start;
-    align-items: center;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
-/* ----------------------- */
-
 /* Bautizando mis areas como dice la profe :) */
-
 .intro {
     grid-area: intro;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 10px 20px;
 }
 
 .imgIzq{
@@ -98,7 +89,6 @@
 .banner {
     img{
     width: 100%;
-    height: 100%;
     object-fit: cover;
     border-radius: 15px;
     filter:opacity(30%);

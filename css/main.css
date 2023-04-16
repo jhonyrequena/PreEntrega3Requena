@@ -12,6 +12,11 @@ h2 {
   color: rgb(0, 74, 173);
 }
 
+h3 {
+  font-size: 1.5em;
+  color: rgb(255, 196, 93);
+}
+
 /* Aplico un Background Pattern que se repita y quede fijo cuando se hace scroll, para dar la sensación de parallax */
 body {
   background-image: url(../img/darkness.png);
@@ -24,6 +29,11 @@ p {
   font-weight: 300;
   text-align: justify;
   color: rgb(245, 245, 245);
+}
+
+button {
+  background-color: rgb(0, 74, 173) !important;
+  color: rgb(255, 196, 93) !important;
 }
 
 /* Un contenedor para usarlo en las partes con contenido de dos columnas con imagenes y texto */
@@ -46,7 +56,8 @@ p {
 
 .imgS {
   width: 100%;
-  padding: 10px 20px;
+  padding: 20px;
+  height: auto;
 }
 
 .logo {
@@ -55,17 +66,27 @@ p {
   height: auto;
 }
 
-.descarga {
-  font-size: 1.5em;
+.form, .buttonError {
+  color: rgb(255, 196, 93);
+  font-size: 1em;
   text-decoration: none;
 }
 
 .borderGal {
-  border: 2px solid rgb(245, 245, 245);
+  border: 1px solid rgb(245, 245, 245);
+  border-radius: 12px;
 }
 
-.sizeGal {
-  width: 100%;
+.buttonError {
+  background: rgb(0, 74, 173);
+  color: rgb(255, 196, 93);
+  border-radius: 12px;
+  margin: 15px;
+  padding: 10px;
+}
+.buttonError:hover {
+  background-color: rgba(5, 50, 68, 0.642);
+  color: rgb(245, 245, 245);
 }
 
 /* Si bien la nav la trabaje con boostrap, agregue unas lineas de css propias para darle mi estilo personal */
@@ -80,16 +101,16 @@ nav ul li {
   margin: 0 20px 0 0;
 }
 nav ul li a {
-  color: rgb(255, 196, 93) !important;
+  color: rgb(255, 196, 93);
   font-size: 1.5em;
-  font-weight: 500 !important;
+  font-weight: 500;
   padding: 2px 7px;
   border-radius: 6px;
   text-decoration: none;
 }
 nav ul li a:hover {
   background-color: rgb(0, 74, 173);
-  color: rgb(245, 245, 245) !important;
+  color: rgb(245, 245, 245);
   padding: 4px 9px;
 }
 
@@ -104,36 +125,31 @@ nav ul li a:hover {
 .recorrido {
   margin: 20px;
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr 1fr;
-  grid-template-rows: 25% repeat(4, 200px);
+  grid-template-columns: 15vw 30vw 30vw auto;
   grid-template-areas: "imgIzq intro intro imgDer" "html html imgHtml banner" "css css imgCss banner" "javascript javascript imgJavascript banner" "angular angular imgAngular banner";
-  gap: 20px;
+  gap: 15px;
 }
 
 /* Dos clases que me permiten ahorrar algo de código y no repetir tanto lo mismo */
-.imgGrid {
+.imgGrid, .contGrid {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .contGrid {
-  display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
-/* ----------------------- */
 /* Bautizando mis areas como dice la profe :) */
 .intro {
   grid-area: intro;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 10px 20px;
 }
 
 .imgIzq {
@@ -184,7 +200,6 @@ nav ul li a:hover {
 /* Le aplique al banner un filtro con opacidad del 30% y use la propiedad object-fit, asi pude lograr que ocupara todo el ancho y alto del lugar que le asigne */
 .banner img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   border-radius: 15px;
   filter: opacity(30%);
@@ -195,10 +210,15 @@ footer {
   background-color: rgba(5, 50, 68, 0.642);
   border-radius: 12px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 15px 15px;
-  padding: 15px;
+  margin: 20px;
+  padding: 20px;
+}
+footer p {
+  font-size: 1em;
+  font-weight: 500;
+  color: rgb(255, 196, 93);
 }
 footer a {
   text-decoration: none;
@@ -208,8 +228,11 @@ footer a {
 /* Colocando el contenido en columna cuando la pantalla sea menor que 992px */
 @media (max-width: 992px) {
   .logo {
-    width: 60%;
-    align-self: center;
+    width: 50%;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2em;
   }
   .contenedor, .headingH1 {
     flex-direction: column;
@@ -226,28 +249,20 @@ footer a {
     padding: 10px;
     text-align: justify;
   }
-  .headingH1 {
-    text-align: center;
-  }
-  .intro .textP {
+  .intro p {
     font-size: 1em;
-  }
-  .recorrido .textP {
-    font-size: 1em;
-  }
-  .recorrido .intro {
     align-items: start;
   }
-  .imgDer {
-    display: none;
-  }
-  .banner {
+  .hidden {
     display: none;
   }
   footer {
-    margin-bottom: 20px;
     flex-direction: column;
+    margin-bottom: 20px;
     align-items: center;
+  }
+  footer svg {
+    width: 36px;
   }
   footer p {
     font-size: 1em;
@@ -261,8 +276,9 @@ footer a {
 /* Segundo Breakpoint */
 @media (max-width: 576px) {
   .logo {
-    width: 35%;
-    align-self: center;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
   }
   .contenedor, .headingH1 {
     flex-direction: column;
@@ -279,17 +295,11 @@ footer a {
     padding: 10px;
     text-align: center;
   }
-  .headingH1 {
-    text-align: center;
-  }
   .recorrido {
     display: flex;
     flex-direction: column;
   }
-  .imgDer {
-    display: none;
-  }
-  .banner {
+  .hidden {
     display: none;
   }
   h1 {
@@ -298,6 +308,9 @@ footer a {
   footer {
     flex-direction: column;
     align-items: center;
+  }
+  footer p {
+    font-size: 1em;
   }
   iframe {
     width: 100%;

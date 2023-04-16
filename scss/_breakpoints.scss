@@ -5,8 +5,12 @@
 @media(max-width: 992px){
 
     .logo {
-    width: 60%;
-    align-self: center;
+    width: 50%;
+    }
+
+    h1{
+        text-align: center;
+        font-size: $textMd;
     }
 
     .contenedor {
@@ -26,33 +30,22 @@
         text-align: justify;
     }
 
-    .headingH1{
-        text-align: center;
-    }
-
-    .intro .textP {
+    .intro p{
         font-size: $textXsm;
+        align-items:start;
     }
 
-        .recorrido .textP {
-            font-size: $textXsm;
-        }
-
-        .recorrido .intro {
-            align-items:start;
-        }
-
-    .imgDer {
+    .hidden {
         display: none;
-    }
-    .banner {
-        display: none;
-    }
+        } 
 
     footer{
-        margin-bottom: 20px;
         flex-direction: column;
+        margin-bottom: 20px;
         align-items: center;
+        svg{
+            width: 36px;
+        }
         p{
             font-size: $textXsm;
             text-align: center;
@@ -69,8 +62,9 @@
 @media(max-width: 576px){
 
     .logo {
-    width: 35%;
-    align-self: center;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
     }
 
     .contenedor {
@@ -90,19 +84,12 @@
         text-align: center;
     }
 
-    .headingH1{
-        text-align: center;
-    }
-
     .recorrido {
         display: flex;
         flex-direction: column;
     }
 
-    .imgDer {
-        display: none;
-    }
-    .banner {
+    .hidden {
         display: none;
     }
 
@@ -113,6 +100,9 @@
     footer{
         flex-direction: column;
         align-items: center;
+        p{
+            font-size: $textXsm;
+        }
     }
     
     iframe {

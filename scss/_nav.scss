@@ -7,15 +7,15 @@ nav {
         li{
             margin: 0 20px 0 0;
             a{
-                color:$secondaryColor !important; 
+                color:$secondaryColor; 
                 font-size: $textSm;
-                font-weight: $fontBold !important;
+                font-weight: $fontBold;
                 padding: 2px 7px;
                 border-radius: 6px;
                 text-decoration: none;
                     &:hover{
                         background-color: $bgOptional;
-                        color:$mainColor !important;
+                        color:$mainColor;
                         padding: 4px 9px;
                     }
             }
