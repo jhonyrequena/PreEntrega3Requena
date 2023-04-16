@@ -257,6 +257,11 @@ footer a {
   .hidden {
     display: none;
   }
+  .imgS {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
   footer {
     flex-direction: column;
     margin-bottom: 20px;
@@ -302,6 +307,11 @@ footer a {
   .recorrido {
     display: flex;
     flex-direction: column;
+  }
+  .imgS {
+    width: 100%;
+    padding: 20px;
+    height: auto;
   }
   .hidden {
     display: none;
