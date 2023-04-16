@@ -1,5 +1,7 @@
-# PreEntrega2Requena
+# PreEntrega3Requena
 Proyecto del Curso Desarrollo Web de Coderhouse
 
-Saludos Tutora Naty, Profe Laura y Coordinadora de Cursada Macarena.
+Saludos Tutora Natalia, Profe Laura y Coordinadora de Cursada Macarena.
+
+Para la entrega final espero tener listo el Readme.
 
