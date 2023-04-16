@@ -48,6 +48,7 @@ button {
 
 .headingH1 {
   flex-direction: column;
+  text-align: center;
 }
 
 .contCajas {
@@ -275,10 +276,13 @@ footer a {
 }
 /* Segundo Breakpoint */
 @media (max-width: 576px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   .logo {
-    width: 30%;
-    justify-content: center;
-    align-items: center;
+    width: 40%;
   }
   .contenedor, .headingH1 {
     flex-direction: column;
@@ -301,9 +305,6 @@ footer a {
   }
   .hidden {
     display: none;
-  }
-  h1 {
-    text-align: center;
   }
   footer {
     flex-direction: column;

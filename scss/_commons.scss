@@ -48,6 +48,7 @@ button {
 .headingH1{
    @extend .contenedor;
         flex-direction: column;
+        text-align: center;
    }
 
 .contCajas {

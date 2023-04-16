@@ -61,10 +61,13 @@
 /* Segundo Breakpoint */
 @media(max-width: 576px){
 
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
     .logo {
-    width: 30%;
-    justify-content: center;
-    align-items: center;
+    width: 40%;
     }
 
     .contenedor {
@@ -91,10 +94,6 @@
 
     .hidden {
         display: none;
-    }
-
-    h1{
-        text-align: center;
     }
 
     footer{
