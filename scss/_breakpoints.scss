@@ -5,7 +5,7 @@
 @media(max-width: 992px){
 
     .logo {
-    width: 50%;
+    width: 40%;
     }
 
     h1{
@@ -35,9 +35,13 @@
         align-items:start;
     }
 
-    .hidden {
+    .desktop {
         display: none;
-        } 
+    }
+    
+    .mobile {
+        display: block;
+    }
 
     .imgS {
         width: 100%;
@@ -70,7 +74,7 @@
     nav {
         display: flex;
         flex-direction: row;
-        flex-wrap:wrap;
+        flex-wrap: nowrap;
     }
     .logo {
     width: 40%;
@@ -103,14 +107,14 @@
         padding: 20px;
         height: auto;
         }
-        
-    .hidden {
-        display: none;
-    }
 
     footer{
         flex-direction: column;
         align-items: center;
+        .logo{
+            margin-left: 30%;
+        }
+       
         p{
             font-size: $textXsm;
         }
@@ -119,5 +123,13 @@
     iframe {
         width: 100%;
         height: auto;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
     }
 }

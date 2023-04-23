@@ -1,3 +1,11 @@
+@mixin textos ($size, $line, $color, $padding){
+    font-family: $mainFont;
+    font-size: $size;
+    line-height: $line;
+    color: $color;
+    padding: $padding;
+}
+
 @mixin bgKey (){
     background-color: $bgPrimary;
     border-radius: 12px;

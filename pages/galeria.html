@@ -48,63 +48,100 @@
     <!-- Arrancamos main -->
     <!-- Para el main de esta pantalla utilice el sistema de columnas de Boostrap para generar las que necesitaria para el diseño, el mismo se apila en una columna cuando la pantalla se hace mas chica -->
         <main>
-            <div class="container-fluid text-center">
-                <header>
-                    <div class="row">
-                        <div class="col">
-                            <h1 class="headingH1">Proyectos y Colaboraciones (Próximamente)</h1>
-                        </div>
-                    </div>
-                    <div class="row mx-2">
-                        <div class="col">
-                            <h2>Galeria</h2>
-                            <p>Esta parte de mi portfolio próximamente sera destinado a compartir proyectos en los que pueda colaborar y algunos trabajos propios que pueda compartir.</p>
-                        </div>
-                    </div>
-                </header>
-                <div class="row mx-2 my-2">
-                    <div class="col-md-6 borderGal">
-                        <img class="imgS" src="../img/Github_head.webp" alt="Proyecto Página Web Coderhouse">
-                        <h3>Página Web-Coderhouse</h3>
-                        <p>Repositorio en Github donde se muestra todo el código empleado para la realización de este proyecto, realizado bajo la tutoria y enseñanza de la plataforma Coderhouse.</p>
-                        <a href="https://github.com/jhonyrequena/PreEntrega2Requena.git" target="_blank">Ver Proyecto</a>
-                    </div>
-                    <div class="col-md-6 borderGal">
-                        <img class="imgS" src="../img/img2.jpg" alt="Proyecto 2">
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción del Proyecto 2</p>
-                        <a href="../error404.html">Ver Proyecto</a>
-                    </div>
+          <header>
+              <div class="row">
+                <div class="col">
+                    <h1 class="headingH1">Proyectos y Colaboraciones (Próximamente)</h1>
                 </div>
-                <div class="row mx-2 my-2">
-                    <div class="col-md-6 borderGal">
-                        <img class="imgS" src="../img/img3.jpg" alt="Proyecto 3">
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción del Proyecto 2</p>
-                        <a href="../error404.html">Ver Proyecto</a>
-                    </div>
-                    <div class="col-md-6 borderGal">
-                        <img class="imgS" src="../img/img4.jpg" alt="Proyecto 4">
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción del Proyecto 2</p>
-                        <a href="../error404.html">Ver Proyecto</a>
-                    </div>
+              </div>
+              <div class="row mx-2">
+                <div class="col">
+                    <h2>Galeria</h2>
+                    <p>Esta parte de mi portfolio próximamente sera destinado a compartir proyectos en los que pueda colaborar y algunos trabajos propios que pueda compartir.</p>
                 </div>
-                <div class="row mx-2 my-2">
-                    <div class="col-md-6 borderGal">
-                        <img class="imgS" src="../img/img5.jpg" alt="Proyecto 5">
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción del Proyecto 2</p>
-                        <a href="../error404.html">Ver Proyecto</a>
-                    </div>
-                    <div class="col-md-6 borderGal">
-                        <img class="imgS" src="../img/img6.jpg" alt="Proyecto 6">
-                        <h3>Proyecto 2</h3>
-                        <p>Descripción del Proyecto 2</p>
-                        <a href="../error404.html">Ver Proyecto</a>
-                    </div>
-                </div>
+              </div>
+          </header>
+          <!-- Esta parte de la pagina se deberia ocultar cuando paso a mobile -->
+          <section class="mobile desktop">
+            <div class="row mx-2 my-2">
+              <figure class="col-md-6 card">
+                <img class="cardImage" src="../img/FD7m9fdWYAQyqi7.jpg" alt="Proyecto Página Web Coderhouse">
+                <figcaption class="cardBody">
+                  <h3 class="cardTitle">Página Web-Coderhouse</h3>
+                  <p class="cardDescription">Repositorio en Github donde se muestra todo el código empleado para la realización de este proyecto, realizado bajo la tutoria y enseñanza de la plataforma Coderhouse.</p>
+                  <a href="https://github.com/jhonyrequena/PreEntrega2Requena.git" target="_blank" class="cardDescription">Ver Proyecto</a>
+                </figcaption>
+              </figure>
+              <figure class="col-md-6 card">
+                  <img class="cardImage" src="../img/portada-inteligencia-artificial.jpg" alt="Proyecto 2">
+                <figcaption class="cardBody">
+                  <h3 class="cardTitle">Inteligencia Artificial</h3>
+                  <p class="cardDescription">Una pequeña infografía realizada a la par del curso para conocer un poco acerca de la Inteligencia Artificial, presente o futuro?</p>
+                  <a href="../error404.html" class="cardDescription">Ver Proyecto</a>
+                </figcaption>
+              </figure>
             </div>
+            <div class="row mx-2 my-2">
+              <figure class="col-md-6 card">
+                <img class="cardImage" src="../img/web-developer-1024x717.jpg" alt="Proyecto 3">
+                <figcaption class="cardBody">
+                  <h3 class="cardTitle">Proyecto 3</h3>
+                  <p class="cardDescription">Descripción del Proyecto 2</p>
+                  <a href="../error404.html" class="cardDescription">Ver Proyecto</a>
+                </figcaption>
+              </figure>
+              <figure class="col-md-6 card">
+                  <img class="cardImage" src="../img/Github_head.webp" alt="Proyecto 4">
+                <figcaption class="cardBody">
+                  <h3 class="cardTitle">Proyecto 4</h3>
+                  <p class="cardDescription">Descripción del Proyecto 2</p>
+                  <a href="../error404.html" class="cardDescription">Ver Proyecto</a>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+          <!-- Aca comienza un carrousel que se va a mostrar en mobile unicamente -->
+          <section class="hiddenDs desktop">
+              <div id="carouselExampleCaptions" class="carousel slide">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="../img/img1.jpg" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../img/img2.jpg" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../img/img3.jpg" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+          </section>
+          <!-- Aca termina el carrousel de mobile -->
         </main>
     <!-- Aqui termina main -->
     <!-- Comienza mi footer -->
