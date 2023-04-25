@@ -24,10 +24,7 @@ body {
 }
 
 p {
-    font-size: $textSm;
-    font-weight: $fontXlight;
-    text-align:justify;
-    color: $mainColor;
+    @include textos($textSm, 1.6em, $mainColor, $fontXlight, justify, 0)
 }
 
 button {
@@ -56,9 +53,7 @@ button {
     }
 
 .imgS {
-    width: 100%;
-    padding: 20px;
-    height: auto;
+    @include imagenes;
     }
 
 .logo {
@@ -76,13 +71,9 @@ button {
     justify-content: center;
     padding: 20px;
     p{
-        font-size: $textMd;
+        @include textos($textMd, 2.3em, $secondaryColor, $fontlight, center, 0);
         font-style: italic;
-        text-align: center;
-        line-height: 2.3em;
-        font-weight: $fontlight;
-        color: $secondaryColor;
-        width: 40%;
+        width: 50%;
     }
     
 }
@@ -104,9 +95,4 @@ button {
         background-color: $bgSecondary;
         color:$mainColor;
     }
-
-.textContainer p{
-    display: flex;
-    text-align: center;
-}
 }

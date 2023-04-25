@@ -18,7 +18,7 @@
 }
 
 .card:hover .cardImage {
-    opacity: 0.5;
+    opacity: 0.6;
     scale: 1;
 }
 
@@ -26,6 +26,7 @@
     position: absolute;
     inset: 0;
     padding: 50px;
+    margin-top: 50px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -51,15 +52,18 @@
 
 .cardTitle {
     font-size: $textMd;
-    color: $black;
+    color: $secondaryColor;
+    padding: 5px;
     letter-spacing: 1px;
-    text-transform: uppercase;
     text-shadow: 1px 1px 10px
     rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.504);
+    border-radius: 5px;
 }
 
 .cardDescription {
     font-size: $textSm;
+    margin-bottom: -50px;
     opacity: 0;
     translate: -25px;
     transition: opacity 0.25s,
@@ -69,4 +73,10 @@
 .card:hover .cardDescription {
     opacity: 1;
     translate: 0;
+    margin: 5px 0 5px 0;
+    padding: 5px;
+    font-weight: $fontBold;
+    background-color: rgba(0, 0, 0, 0.612);
+    border-radius: 5px;
+    text-decoration: none;
 }

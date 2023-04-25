@@ -1,9 +1,17 @@
-@mixin textos ($size, $line, $color, $padding){
+@mixin textos ($size, $line, $color, $weight, $aline, $padding){
     font-family: $mainFont;
     font-size: $size;
     line-height: $line;
     color: $color;
+    font-weight: $weight;
+    text-align: $aline;
     padding: $padding;
+}
+
+@mixin imagenes (){
+    width: 100%;
+    padding: 20px;
+    height: auto;
 }
 
 @mixin bgKey (){

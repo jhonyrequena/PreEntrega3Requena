@@ -25,10 +25,13 @@ body {
 }
 
 p {
+  font-family: "Poppins", sans-serif;
   font-size: 1.5em;
+  line-height: 1.6em;
+  color: rgb(245, 245, 245);
   font-weight: 300;
   text-align: justify;
-  color: rgb(245, 245, 245);
+  padding: 0;
 }
 
 button {
@@ -77,13 +80,15 @@ button {
   padding: 20px;
 }
 .cuotes p {
+  font-family: "Poppins", sans-serif;
   font-size: 2em;
-  font-style: italic;
-  text-align: center;
   line-height: 2.3em;
-  font-weight: 400;
   color: rgb(255, 196, 93);
-  width: 40%;
+  font-weight: 400;
+  text-align: center;
+  padding: 0;
+  font-style: italic;
+  width: 50%;
 }
 
 .form, .buttonError {
@@ -102,10 +107,6 @@ button {
 .buttonError:hover {
   background-color: rgba(5, 50, 68, 0.642);
   color: rgb(245, 245, 245);
-}
-.buttonError .textContainer p {
-  display: flex;
-  text-align: center;
 }
 
 /* Si bien la nav la trabaje con boostrap, agregue unas lineas de css propias para darle mi estilo personal */
@@ -265,7 +266,7 @@ nav ul li a:hover {
 }
 
 .card:hover .cardImage {
-  opacity: 0.5;
+  opacity: 0.6;
   scale: 1;
 }
 
@@ -273,6 +274,7 @@ nav ul li a:hover {
   position: absolute;
   inset: 0;
   padding: 50px;
+  margin-top: 50px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -297,14 +299,17 @@ nav ul li a:hover {
 
 .cardTitle {
   font-size: 2em;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 196, 93);
+  padding: 5px;
   letter-spacing: 1px;
-  text-transform: uppercase;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.504);
+  border-radius: 5px;
 }
 
 .cardDescription {
   font-size: 1.5em;
+  margin-bottom: -50px;
   opacity: 0;
   translate: -25px;
   transition: opacity 0.25s, translate 0.25;
@@ -313,6 +318,12 @@ nav ul li a:hover {
 .card:hover .cardDescription {
   opacity: 1;
   translate: 0;
+  margin: 5px 0 5px 0;
+  padding: 5px;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.612);
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 /* El footer tiene los iconos para redes sociales de boostrap, tambien agregue un id para llegar a la parte superior de la pagina desde el logo del footer */
@@ -338,7 +349,7 @@ footer a {
 /* Colocando el contenido en columna cuando la pantalla sea menor que 992px */
 @media (max-width: 992px) {
   .logo {
-    width: 40%;
+    width: 50%;
   }
   h1 {
     text-align: center;
@@ -369,6 +380,14 @@ footer a {
   .mobile {
     display: block;
   }
+  .cardDescription {
+    font-size: 1.5em;
+    margin-top: 35px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.612);
+    border-radius: 5px;
+    opacity: 1;
+  }
   .imgS {
     width: 100%;
     padding: 20px;
@@ -378,6 +397,9 @@ footer a {
     flex-direction: column;
     margin-bottom: 20px;
     align-items: center;
+  }
+  footer .logo {
+    margin-left: 30%;
   }
   footer svg {
     width: 36px;
@@ -390,20 +412,29 @@ footer a {
     width: 100%;
     height: 100%;
   }
+  .carousel-caption h2, .carousel-caption h3 {
+    font-size: 1em;
+  }
 }
 /* Segundo Breakpoint */
 @media (max-width: 576px) {
   nav {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    align-items: center;
   }
-  .logo {
-    width: 40%;
+  nav .navbar-brand {
+    max-width: 60%;
+  }
+  nav .navbar-brand img {
+    width: 55%;
+  }
+  nav .logo {
+    width: 35%;
   }
   .contenedor, .headingH1 {
     flex-direction: column;
     align-items: center;
+    padding: 10px;
   }
   .contenedor img, .headingH1 img {
     width: 100%;
@@ -412,8 +443,8 @@ footer a {
     width: 100%;
     margin-bottom: 10px;
     align-self: center;
-    font-size: 1.5em;
-    padding: 10px;
+    font-size: 1em;
+    padding: 5px;
     text-align: center;
   }
   .recorrido {
@@ -424,6 +455,20 @@ footer a {
     width: 100%;
     padding: 20px;
     height: auto;
+  }
+  .cuotes {
+    width: 100%;
+    padding: 10px;
+  }
+  .cuotes p {
+    width: 80%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: rgb(255, 196, 93);
+    font-weight: 400;
+    text-align: center;
+    padding: 0;
   }
   footer {
     flex-direction: column;
@@ -444,6 +489,20 @@ footer a {
   }
   .mobile {
     display: none;
+  }
+  .cardTitle {
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 0.8em;
+  }
+  .cardTitle p {
+    text-align: center;
+    color: rgb(255, 196, 93);
+  }
+  .cardTitle a {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
   }
 }
 
