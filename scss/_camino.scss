@@ -95,6 +95,7 @@
     }
 }
 
+//Esta animacion la consegui por internet, no sabia con exactitud si podia agregarlas como imports aparte y la verdad no tuve tiempo de averiguarlo, asi que la deje en el mismo import.
 @keyframes rotate {from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}}
 @-webkit-keyframes rotate {from {-webkit-transform: rotate (0deg);} to {-webkit-transform: rotate(360deg);}}
