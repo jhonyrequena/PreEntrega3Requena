@@ -32,6 +32,5 @@ Tengo pensado antes de arrancar con JS realizar otro proyecto un poco más compl
 Bueno espero no haberme extendido tanto 😬 es mi primer "Readme", y lo primero que me vino a la mente fue mi tesis de grado en la universidad 😅
 
 
-
 Muchas Grcias.
 Un abrazo. 

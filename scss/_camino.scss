@@ -1,5 +1,5 @@
 /* Creando Grid para la sección Camino */
-/* Un background para aplicarle solo a los lugares elegidos */
+
 .bgGrid {
     @include bgKey;
 }
@@ -16,7 +16,7 @@
     "angular angular imgAngular banner";
     gap: 15px;
 }
-/* Dos clases que me permiten ahorrar algo de código y no repetir tanto lo mismo */
+
 .imgGrid{
     display: flex;
     justify-content: center;

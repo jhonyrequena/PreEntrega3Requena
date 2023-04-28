@@ -28,7 +28,7 @@ p {
   font-family: "Poppins", sans-serif;
   font-size: 1.5em;
   line-height: 1.6em;
-  color: rgb(245, 245, 245);
+  color: rgb(205, 201, 201);
   font-weight: 300;
   text-align: justify;
   padding: 0;
@@ -106,7 +106,7 @@ button {
 }
 .buttonError:hover {
   background-color: rgba(5, 50, 68, 0.642);
-  color: rgb(245, 245, 245);
+  color: rgb(205, 201, 201);
 }
 
 /* Si bien la nav la trabaje con boostrap, agregue unas lineas de css propias para darle mi estilo personal */
@@ -130,12 +130,11 @@ nav ul li a {
 }
 nav ul li a:hover {
   background-color: rgb(0, 74, 173);
-  color: rgb(245, 245, 245);
+  color: rgb(205, 201, 201);
   padding: 4px 9px;
 }
 
 /* Creando Grid para la sección Camino */
-/* Un background para aplicarle solo a los lugares elegidos */
 .bgGrid {
   background-color: rgba(5, 50, 68, 0.25);
   border-radius: 12px;
@@ -150,7 +149,6 @@ nav ul li a:hover {
   gap: 15px;
 }
 
-/* Dos clases que me permiten ahorrar algo de código y no repetir tanto lo mismo */
 .imgGrid, .contGrid {
   display: flex;
   justify-content: center;
@@ -345,7 +343,7 @@ footer a {
   text-decoration: none;
 }
 
-/* Probando con Responsive 1er Breakpoint */
+/*Responsive 1er Breakpoint */
 /* Colocando el contenido en columna cuando la pantalla sea menor que 992px */
 @media (max-width: 992px) {
   .logo {
