@@ -3,6 +3,10 @@ Proyecto y Entrega Final del Curso Desarrollo Web de Coderhouse
 
 Proyecto a cargo de: Johnny Requena.
 
+A continuación los enlaces:
+Link al Repo: https://github.com/jhonyrequena/ProyectoFinalRequena
+Link a pages: https://jhonyrequena.github.io/ProyectoFinalRequena/
+
 Saludos Tutora Natalia, Profe Laura y Coordinadora de Cursada Macarena.
 
 Antes que nada quisiera agradecer a todo el grupo de Coder, Tutores, Profesora y Coordinadora, ha sido una grata experiencia compartir durante todas estas semanas con ustedes.
